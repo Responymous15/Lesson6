@@ -1,3 +1,4 @@
+import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class Main
@@ -9,7 +10,8 @@ public class Main
         //func3(4444);
         //boolean isPol = func4("abba");
         //func5(24);
-        func6();
+        //func6();
+        func7();
     }
 
     public static void func1()
@@ -111,5 +113,31 @@ public class Main
             }
             System.out.println();
         }
+    }
+
+    public static void func7()
+    {
+        int grade;
+        Scanner s = new Scanner(System.in);
+        int minGrade = 100;
+        int maxGrade = 0;
+
+        for (int i = 0; i < 7; i++)
+        {
+            System.out.println("Enter grade: ");
+            grade = s.nextInt();
+
+            if (grade < minGrade)
+            {
+                minGrade = grade;
+            }
+            else if(grade > maxGrade)
+            {
+                maxGrade = grade;
+            }
+        }
+
+        System.out.println("Max grade: " + maxGrade);
+        System.out.println("Min Grade: " + minGrade);
     }
 }
