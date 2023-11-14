@@ -6,7 +6,8 @@ public class Main
     {
         //func1();
         //func2();
-        func3(4444);
+        //func3(4444);
+        boolean isPol = func4("abba");
     }
 
     public static void func1()
@@ -67,4 +68,22 @@ public class Main
             }
         }
     }
+
+    public static boolean func4(String s)
+    {
+        boolean isPolindrome = true;
+
+        for (int i = 0; i < s.length() / 2; i++)
+        {
+            if (s.charAt(i) != s.charAt(s.length() - 1 - i))
+            {
+                isPolindrome = false;
+                break;
+            }
+        }
+
+        return isPolindrome;
+    }
+
+
 }
