@@ -1,11 +1,73 @@
 import javax.sound.midi.Soundbank;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main
 {
     public static void main(String[] args)
     {
+        Scanner s = new Scanner(System.in);
+        while (true)
+        {
+            System.out.println("Enter exercise number to check (1-10):");
+            int choice = s.nextInt();
 
+            switch (choice)
+            {
+                case 0:
+                    System.out.println("Goodbye!");
+                    System.exit(0);
+                    break;
+                case 1:
+                    func1();
+                    break;
+                case 2:
+                    func2();
+                    break;
+                case 3:
+                    System.out.println("Enter a code to check: ");
+                    int codeToCheck = s.nextInt();
+                    func3(codeToCheck);
+                    break;
+                case 4:
+                    System.out.println("Enter a string to check for palindrome: ");
+                    String str = s.nextLine();
+                    func4(str);
+                    break;
+                case 5: {
+                    System.out.println("Enter a number to find is factors");
+                    int num = s.nextInt();
+                    func5(num);
+                }
+                case 6:
+                    func6();
+                    break;
+                case 7:
+                    func7();
+                    break;
+                case 8:
+                {
+                    System.out.println("Enter a number to check if it's in the fib");
+                    int num = s.nextInt();
+                    func8(num);
+                    break;
+                }
+                case 9:
+                    System.out.println("Enter two numbers to multiply: ");
+                    int a = s.nextInt();
+                    int b = s.nextInt();
+                    func9(a, b);
+                    break;
+                case 10:
+                    System.out.println("Enter height of triangle: ");
+                    int height = s.nextInt();
+                    func10(height);
+                    break;
+                default:
+                    System.out.println("Invalid choice. Enter only between 1-10");
+                    break;
+            }
+        }
     }
 
     public static void func1()
