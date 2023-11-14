@@ -5,15 +5,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-        //func1();
-        //func2();
-        //func3(4444);
-        //func4("abba");
-        //func5(24);
-        //func6();
-        //func7();
-        //func8(5);
-        func9(5, 3);
+
     }
 
     public static void func1()
@@ -178,5 +170,26 @@ public class Main
         }
 
         System.out.println("The mul of " + a + " and " + b + " is " + mul);
+    }
+
+    public static void func10(int height)
+    {
+        for (int i = 1; i <= height; i++)
+        {
+            // Print spaces before the * (the spaces is the height size - i)
+            for (int j = 1; j <= height - i; j++)
+            {
+                System.out.print(" ");
+            }
+
+            // Print the * (the * amount is the size of i * 2 - 1)
+            for (int k = 1; k <= i * 2 - 1; k++)
+            {
+                System.out.print("*");
+            }
+
+            // Make new line
+            System.out.println();
+        }
     }
 }
