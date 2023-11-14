@@ -74,7 +74,7 @@ public class Main
         }
     }
 
-    public static boolean func4(String s)
+    public static void func4(String s)
     {
         boolean isPolindrome = true;
 
@@ -87,7 +87,11 @@ public class Main
             }
         }
 
-        return isPolindrome;
+        if (isPolindrome)
+            System.out.println("The string is polindrome");
+        else
+            System.out.println("The string is not polindrome");
+
     }
 
     public static void func5(int num)
@@ -163,4 +167,5 @@ public class Main
             b = a + b;
         }
     }
+
 }
