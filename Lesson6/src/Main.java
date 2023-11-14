@@ -9,6 +9,7 @@ public class Main
         //func3(4444);
         //boolean isPol = func4("abba");
         //func5(24);
+        func6();
     }
 
     public static void func1()
@@ -100,5 +101,15 @@ public class Main
         }
     }
 
-
+    public static void func6()
+    {
+        for(int i = 1; i <= 10; i++)
+        {
+            for(int j = 1; j <= 10; j++)
+            {
+                System.out.printf("%4d", i * j);
+            }
+            System.out.println();
+        }
+    }
 }
