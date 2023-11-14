@@ -8,11 +8,12 @@ public class Main
         //func1();
         //func2();
         //func3(4444);
-        //boolean isPol = func4("abba");
+        //func4("abba");
         //func5(24);
         //func6();
         //func7();
         //func8(5);
+        func9(5, 3);
     }
 
     public static void func1()
@@ -168,4 +169,14 @@ public class Main
         }
     }
 
+    public static void func9(int a, int b)
+    {
+        int mul = 0;
+        for (int i = 0; i < a; i++)
+        {
+            mul += b;
+        }
+
+        System.out.println("The mul of " + a + " and " + b + " is " + mul);
+    }
 }
