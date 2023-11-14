@@ -11,7 +11,8 @@ public class Main
         //boolean isPol = func4("abba");
         //func5(24);
         //func6();
-        func7();
+        //func7();
+        //func8(5);
     }
 
     public static void func1()
@@ -139,5 +140,27 @@ public class Main
 
         System.out.println("Max grade: " + maxGrade);
         System.out.println("Min Grade: " + minGrade);
+    }
+
+    public static void func8(int num)
+    {
+        int a = 1;
+        int b = 1;
+
+        while (true)
+        {
+            if (a == num || b == num)
+            {
+                System.out.println("The number " + num + " found in the fib");
+                break;
+            } else if (a > num && b > num)
+            {
+                System.out.println("The number " + num + " not found in the fib");
+                break;
+            }
+
+            a = a + b;
+            b = a + b;
+        }
     }
 }
