@@ -70,12 +70,15 @@ public class Main
         }
     }
 
+
+    // The function get 5 grades and print the average
     public static void func1()
     {
         int avg = 0;
         int grade;
         Scanner s = new Scanner(System.in);
 
+        // Get 5 grades
         for (int i = 0; i < 5; i++)
         {
             System.out.println("Enter grade: ");
@@ -88,12 +91,15 @@ public class Main
         System.out.println("The average is: " + avg);
     }
 
+
+    // The function get words until the word "enter" and print the count of the words.
     public static void func2()
     {
         String word;
         int count = 0;
         Scanner s = new Scanner(System.in);
 
+        // Get words until it's the word "Enter"
         do
         {
             System.out.println("Enter word: ");
@@ -104,6 +110,8 @@ public class Main
         System.out.println("Words: " + count);
     }
 
+
+    // The function get 4 digits number code and check the user number is valid.
     public static void func3(int code_)
     {
         int code;
@@ -111,6 +119,7 @@ public class Main
 
         while (true)
         {
+            // While the code is not 4 digits
             do
             {
                 System.out.println("Enter 4 digits code: ");
@@ -129,12 +138,14 @@ public class Main
         }
     }
 
+    // The function get string and check if is polindrome
     public static void func4(String s)
     {
         boolean isPolindrome = true;
 
         for (int i = 0; i < s.length() / 2; i++)
         {
+            // If the string mirrorly not equals so it's not polindrome
             if (s.charAt(i) != s.charAt(s.length() - 1 - i))
             {
                 isPolindrome = false;
@@ -149,13 +160,15 @@ public class Main
 
     }
 
+    // The function get number and prints its factors
     public static void func5(int num)
     {
         for (int i = 1; i <= num; i++)
         {
+            // If current 'i' is factor of num print it with ,
             if(num % i == 0)
             {
-                if (i == num)
+                if (i == num)  // If it's the last number print without ,
                     System.out.print(i);
                 else
                     System.out.print(i + ",");
@@ -163,6 +176,7 @@ public class Main
         }
     }
 
+    // The function print the multiplication board
     public static void func6()
     {
         for(int i = 1; i <= 10; i++)
@@ -175,6 +189,7 @@ public class Main
         }
     }
 
+    // The function get 7 grades and prints the min and max grades
     public static void func7()
     {
         int grade;
@@ -187,11 +202,11 @@ public class Main
             System.out.println("Enter grade: ");
             grade = s.nextInt();
 
-            if (grade < minGrade)
+            if (grade < minGrade)  // If current grade lower than min grade
             {
                 minGrade = grade;
             }
-            else if(grade > maxGrade)
+            else if(grade > maxGrade) // If current grade greater than max grade
             {
                 maxGrade = grade;
             }
@@ -201,6 +216,7 @@ public class Main
         System.out.println("Min Grade: " + minGrade);
     }
 
+    // The function get number and prints if it in the fib.
     public static void func8(int num)
     {
         int a = 1;
@@ -208,12 +224,15 @@ public class Main
 
         while (true)
         {
+
             if (a == num || b == num)
             {
+                // If one of the fib numbers equals to num so is found in the fib
                 System.out.println("The number " + num + " found in the fib");
                 break;
             } else if (a > num && b > num)
             {
+                // If the fib numbers greater than num so is not found in the fib
                 System.out.println("The number " + num + " not found in the fib");
                 break;
             }
@@ -223,6 +242,7 @@ public class Main
         }
     }
 
+    // The function get 2 number and multiplying them
     public static void func9(int a, int b)
     {
         int mul = 0;
@@ -234,6 +254,7 @@ public class Main
         System.out.println("The mul of " + a + " and " + b + " is " + mul);
     }
 
+    // The function get height of triangle and print it with *
     public static void func10(int height)
     {
         for (int i = 1; i <= height; i++)
