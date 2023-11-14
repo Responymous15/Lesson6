@@ -7,7 +7,8 @@ public class Main
         //func1();
         //func2();
         //func3(4444);
-        boolean isPol = func4("abba");
+        //boolean isPol = func4("abba");
+        //func5(24);
     }
 
     public static void func1()
@@ -83,6 +84,20 @@ public class Main
         }
 
         return isPolindrome;
+    }
+
+    public static void func5(int num)
+    {
+        for (int i = 1; i <= num; i++)
+        {
+            if(num % i == 0)
+            {
+                if (i == num)
+                    System.out.print(i);
+                else
+                    System.out.print(i + ",");
+            }
+        }
     }
 
 
